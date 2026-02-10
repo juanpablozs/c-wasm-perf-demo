@@ -1,0 +1,17 @@
+{
+  "name": "c-wasm-perf-demo",
+  "version": "1.0.0",
+  "description": "Demonstration of C compiled to WASM vs pure TS for CPU intensive tasks",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd web && npm install",
+    "dev": "cd web && npm run dev",
+    "build": "npm run wasm:build && cd web && npm run build",
+    "test": "cd web && npm test",
+    "wasm:build": "node scripts/build-wasm.js",
+    "lint": "cd web && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
